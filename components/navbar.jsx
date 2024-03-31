@@ -11,20 +11,20 @@ export default function Navbar() {
   const links = [
     {
       name: "Home",
-      path: "/",
+      path: "#",
     },
     {
       name: "About",
       path: "#about",
     },
     {
-      name: "Menu",
-      path: "#menu",
+      name: "Product",
+      path: "#product",
     },
-    {
-      name: "Contact",
-      path: "#contact",
-    }
+    // {
+    //   name: "Contact",
+    //   path: "#contact",
+    // }
   ]
 
   const sosmed = [
@@ -79,7 +79,7 @@ export default function Navbar() {
           </button>
 
           {links.map(({ name, path }) => (
-            <a href={path} key={name} className="text-xl font-bold text-gray-300 hover:text-pink-400 duration-200">{name}</a>
+            <a href={path} key={name} onClick={() => setNav(false)} className="text-xl font-bold text-gray-300 hover:text-pink-400 duration-200">{name}</a>
           ))}
 
           <div className="flex items-center">
