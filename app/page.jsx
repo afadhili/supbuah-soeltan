@@ -1,7 +1,8 @@
+import BackOnTop from "@/components/backOnTop";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaShoppingCart } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -17,9 +18,13 @@ export default function Home() {
             <p className="text-lg md:text-xl text-gray-100 max-w-[70%] mb-6">
               Food are the most precious thing in the world.
             </p>
-            <a href="#product" className="group px-6 py-2 rounded-md bg-gradient-to-tl from-primary to-secondary text-gray-300 hover:text-white hover:shadow-md shadow-secondary duration-200">
+            <a href="#product" className="mb-4 group px-6 py-2 rounded-md bg-gradient-to-tl from-primary to-secondary text-gray-300 hover:text-white hover:shadow-md shadow-secondary duration-200">
               See Our Menu
               <FaArrowRight size={18} className="inline-block ml-2 group-hover:rotate-90 duration-200" />
+            </a>
+            <a href="https://gofood.link/a/CHmtFS1" className="group px-6 py-2 rounded-md bg-gradient-to-tl from-green-700 to-green-500 text-gray-300 hover:text-white hover:shadow-md shadow-secondary duration-200">
+              Order Now
+              <FaShoppingCart size={18} className="inline-block ml-2 -translate-x-1 group-hover:translate-x-2 duration-200" />
             </a>
           </div>
         </div>
@@ -80,7 +85,9 @@ export default function Home() {
           </a>
         </div>
       </div>
+
       <Footer />
+      <BackOnTop />
     </main>
   );
 }

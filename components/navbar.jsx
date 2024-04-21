@@ -20,11 +20,7 @@ export default function Navbar() {
     {
       name: "Product",
       path: "#product",
-    },
-    // {
-    //   name: "Contact",
-    //   path: "#contact",
-    // }
+    }
   ]
 
   const sosmed = [
@@ -34,26 +30,20 @@ export default function Navbar() {
       icon: (<div className="w-[30px] h-[30px]">
         <Image src={'/gojek.svg'} alt="Go-Jek" width={100} height={100} />
       </div>),
-      style: 'bg-green-500'
+      style: 'hover:bg-green-500'
     },
     {
       name: 'Instagram',
       href: 'https://instagram.com/supbuah_soeltan',
       icon: <FaInstagram size={30} />,
-      style: 'bg-gradient-to-l from-primary to-secondary'
+      style: 'hover:bg-gradient-to-l hover:from-primary hover:to-secondary'
     },
     {
       name: 'Whatsapp',
       href: 'https://wa.me/6285608929378',
       icon: <FaWhatsapp size={30} />,
-      style: 'bg-green-600'
+      style: 'hover:bg-green-600'
     },
-    // {
-    //   name: 'Facebook',
-    //   href: '#',
-    //   icon: <FaFacebook size={30} />,
-    //   style: 'bg-blue-600'
-    // },
   ]
 
   return (
@@ -98,7 +88,7 @@ export default function Navbar() {
 
       <div className="z-50 fixed hidden md:flex flex-col left-0 top-1/2 -translate-y-1/2">
         {sosmed.map(({ name, href, icon, style }, index) => (
-          <a href={href} key={index} className={`${style} text-gray-300 flex justify-between items-center px-4 py-2 -translate-x-[118px] hover:translate-x-0 duration-200 hover:rounded-r-lg`}>
+          <a href={href} key={index} className={`${style} shadow-lg text-gray-300 bg-gray-800 flex justify-between items-center px-4 py-2 -translate-x-[118px] hover:translate-x-0 duration-200 hover:rounded-r-lg`}>
             <h2 className="text-xl font-bold">
               {name}
             </h2>
