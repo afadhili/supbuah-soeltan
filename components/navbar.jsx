@@ -4,6 +4,7 @@ import { useState } from "react"
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false)
@@ -20,6 +21,10 @@ export default function Navbar() {
     {
       name: "Product",
       path: "#product",
+    },
+    {
+      name: "Contact",
+      path: "#contact",
     }
   ]
 
@@ -48,8 +53,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="z-50 fixed top-0 left-0 right-0 flex justify-between items-center px-8 py-6 bg-slate-800 bg-opacity-50 backdrop-blur-md">
-        <a href="/" className="text-4xl font-bold bg-gradient-to-br from-violet-600 via-pink-400 to-pink-600 bg-clip-text text-transparent">Soeltan</a>
+      <nav className="z-50 fixed top-0 left-0 right-0 flex justify-between items-center px-8 py-6 bg-slate-800/60 backdrop-blur-sm">
+        <Link href="/">
+          <Image src={'/logo.png'} alt="Sup Buah Soeltan" width={150} height={100} />
+        </Link>
 
         <div className="hidden md:flex gap-4 items-center">
           {links.map(({ name, path }) => (
