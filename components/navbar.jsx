@@ -41,7 +41,7 @@ export default function Navbar() {
       name: 'Instagram',
       href: 'https://instagram.com/supbuah_soeltan',
       icon: <FaInstagram size={30} />,
-      style: 'hover:bg-gradient-to-l hover:from-primary hover:to-secondary'
+      style: 'hover:bg-gradient-to-l hover:from-pink-600 hover:to-violet-500'
     },
     {
       name: 'Whatsapp',
